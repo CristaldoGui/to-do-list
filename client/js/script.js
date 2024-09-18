@@ -6,7 +6,7 @@ const divInput = document.getElementById('div-input');
 function createInputTask(text){
     //cria o elemento DIV e atribui uma classe a ele 
     let div = document.createElement('div');
-    div.setAttribute('onclick', 'taskCheked(this)');
+    div.setAttribute('onclick', 'taskCheked(this, event)');
     div.classList.add('div-task')
 
     //cria o elemento IMG e seta seus atributos
@@ -50,15 +50,19 @@ function excludeTask(bnt){
     bnt.closest('.div-task').remove();
 }
 
-function taskCheked(click){
-    p = click.querySelector('.input-task-check');
+function taskCheked(click, event){
+    let p = click.querySelector('.input-task-check');
+    let img = click.querySelector('img');
 
-    if(click.querySelector('img').getAttribute('src') == './images/checked.png'){
-        click.querySelector('img').setAttribute('src', './images/unchecked.png');
-        p.classList.remove('task-checked');
+    if(event.target == img){
+        if(img.getAttribute('src') == './images/checked.png'){
+            img.setAttribute('src', './images/unchecked.png');
+            p.classList.remove('task-checked');
 
-    }else{
-        click.querySelector('img').setAttribute('src', './images/checked.png');
-        p.classList.add('task-checked');
+        }else{
+            img.setAttribute('src', './images/checked.png');
+            p.classList.add('task-checked');
+        } 
     }
+    
 }

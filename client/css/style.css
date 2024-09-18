@@ -19,7 +19,7 @@ main{
 }
 
 #form{
-    position: relative;
+    position: absolute;
     background-color: #ffff;
     width: 400px;
     height: auto;
@@ -60,13 +60,14 @@ main{
 #input-button{
     background-color: rgba(255, 8, 8, 0.733);
     color: #ffff;
-    height: 40px;
+    height: 44px;
     width: 100px;
     align-self: flex-end;
     border: none;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     justify-self: end;
+    font-size: 14px;
 }
 
 .div-task{
