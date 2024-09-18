@@ -15,10 +15,10 @@ main{
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 #form{
+    top: 25%;
     position: absolute;
     background-color: #ffff;
     width: 400px;

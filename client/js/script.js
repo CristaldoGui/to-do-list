@@ -38,6 +38,11 @@ function createInputTask(text){
 function addTask(){
     //pega o texto do input e atribui a variavel task
     let task = inputTask.value;
+
+    if(task == ''){
+        return alert('Você não pode adicioanar uma task vazia');
+    }
+
     //limpa o input apos a task ser adicionada 
     inputTask.value = '';
 
@@ -46,9 +51,9 @@ function addTask(){
 }
 
 
-function excludeTask(bnt){
+function excludeTask(click){
     //acha a div do botão q foi clicado e exclui ela 
-    bnt.closest('.div-task').remove();
+    click.closest('.div-task').remove();
 }
 
 function taskCheked(click, event){
