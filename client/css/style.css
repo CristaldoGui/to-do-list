@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: #343a40;
+    background-color: #2d3033;
     min-height: 100vh;
 }
 
@@ -70,12 +70,18 @@ main{
     font-size: 14px;
 }
 
+#input-button:hover{
+    background-color: rgba(240, 0, 0, 0.733);
+    box-shadow: 1px 1px 5px rgba(240, 0, 0, 0.733);
+}
+
 .div-task{
     display: flex;
     align-items: center;
     color: #3f3f3f;
     font-size: 14px;
     margin-bottom: 15px;
+    padding: 5px;
 }
 
 .div-task input{
@@ -83,6 +89,12 @@ main{
     color: #888484ce;
     font-size: 20px;
     background-color: #ffff;
+}
+
+.div-task input:hover{
+    color: #5f5f5fce;
+    background-color: transparent;
+    text-shadow: 0.3px 0.3px 2px #5f5f5fce;
 }
 
 .input-task-check{
@@ -94,4 +106,10 @@ main{
 .task-checked{
    text-decoration: line-through; 
    color: #8d8c8c;
+}
+
+.img-animation:hover{
+    transform: translateY(-2px);
+    transition-duration: 0.3s;
+    box-shadow: 1px 3px 2px #6e6e6e;
 }

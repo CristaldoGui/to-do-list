@@ -7,7 +7,8 @@ function createInputTask(text){
     //cria o elemento DIV e atribui uma classe a ele 
     let div = document.createElement('div');
     div.setAttribute('onclick', 'taskCheked(this, event)');
-    div.classList.add('div-task')
+    div.classList.add('img-animation');
+    div.classList.add('div-task');
 
     //cria o elemento IMG e seta seus atributos
     let img = document.createElement('img');
@@ -38,7 +39,7 @@ function addTask(){
     //pega o texto do input e atribui a variavel task
     let task = inputTask.value;
     //limpa o input apos a task ser adicionada 
-    inputTask.value = " ";
+    inputTask.value = '';
 
     //chama a função q cria o HTML da task e passa o variavel task q contem o valor da task 
     createInputTask(task);
@@ -51,10 +52,15 @@ function excludeTask(bnt){
 }
 
 function taskCheked(click, event){
+    //pega o elemento P da task que foi clicada
     let p = click.querySelector('.input-task-check');
+
+    //pega o elemento IMG da task que foi clicada
     let img = click.querySelector('img');
 
+    //Checa se o elemnento que foi clicado foi a imagem 
     if(event.target == img){
+        //Verifica se a imagem já etá checada, se não checa ela 
         if(img.getAttribute('src') == './images/checked.png'){
             img.setAttribute('src', './images/unchecked.png');
             p.classList.remove('task-checked');
