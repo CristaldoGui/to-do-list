@@ -22,12 +22,10 @@ main{
     position: absolute;
     background-color: #ffff;
     width: 400px;
-    height: auto;
     border-radius: 10px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 #div-title{
