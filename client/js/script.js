@@ -23,6 +23,7 @@ function createInputTask(text){
     //cria o elemento INPUT e atribui seu value
     let input = document.createElement('input');
     input.setAttribute('type', 'submit');
+    input.setAttribute('onclick', 'excludeTask(this)')
     input.setAttribute('value', 'x');
 
     //colocando os elementos dentro dos outros
@@ -39,4 +40,8 @@ function addTask(){
     createInputTask(task);
 }
 
+
+function excludeTask(bnt){
+    bnt.closest('.div-task').remove();
+}
 
