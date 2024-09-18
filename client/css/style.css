@@ -12,18 +12,22 @@ body{
 }
 
 main{
-    min-height: 60vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #form{
+    position: relative;
     background-color: #ffff;
     width: 400px;
     height: auto;
-    border-radius: 5px;
-    padding: 15px;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #div-title{
@@ -46,7 +50,7 @@ main{
 #input-task{
     background-color: #eeeeeeda;
     border: none;
-    height: 40px;
+    height: 44px;
     width: 100%;
     padding: 20px;
     border-top-left-radius: 20px;
@@ -70,6 +74,7 @@ main{
     align-items: center;
     color: #3f3f3f;
     font-size: 14px;
+    margin-bottom: 15px;
 }
 
 .div-task input{
@@ -83,4 +88,9 @@ main{
     border: none;
     width: 300px;
     margin-left: 15px;
+}
+
+.task-checked{
+   text-decoration: line-through; 
+   color: #8d8c8c;
 }
