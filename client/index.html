@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>My to do</title>
 </head>
 <body>
     <main>
-        <form action="" method="POST">
-            <h1>To-do-list</h1>
-            <img src="/images/icon.png" alt="Icon">
-            <div>
-                <input type="text" placeholder="Add your task">
-                <input type="submit" value="Add">
+        <form action="" method="POST" id="form">
+            <div id="div-title">
+                <h1>To-Do list</h1>
+                <img src="./images/icon.png" alt="Icon" width="24px" height="24px"> 
             </div>
-            <div>
-                <img src="/images/unchecked.png" alt="">
-                <input type="text">
-                <input type="submit" value="X">
+            
+            <div id="div-input">
+                <input type="text" placeholder="Add your task" id="input-task">
+                <input type="submit" value="Add" id="input-button">
+            </div>
+            <div  class="div-task">
+                <img src="./images/unchecked.png" alt="" width="24px">
+                <p type="text" class="input-task-check">Tirar o lixo</p>
+                <input type="submit" value="x">
             </div>
         </form>
     </main>
