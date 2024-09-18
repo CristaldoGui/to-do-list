@@ -8,7 +8,7 @@
 </head>
 <body>
     <main>
-        <form action="" method="POST" id="form">
+        <div id="form">
             <div id="div-title">
                 <h1>To-Do list</h1>
                 <img src="./images/icon.png" alt="Icon" width="24px" height="24px"> 
@@ -16,14 +16,10 @@
             
             <div id="div-input">
                 <input type="text" placeholder="Add your task" id="input-task">
-                <input type="submit" value="Add" id="input-button">
+                <input type="submit" value="Add"  id="input-button" onclick="addTask()">
             </div>
-            <div  class="div-task">
-                <img src="./images/unchecked.png" alt="" width="24px">
-                <p type="text" class="input-task-check">Tirar o lixo</p>
-                <input type="submit" value="x">
-            </div>
-        </form>
+        </div>
     </main>
+    <script src="./js/script.js"></script>
 </body>
 </html>
