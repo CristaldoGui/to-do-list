@@ -7,8 +7,10 @@ function setAttributeElement(element, attr, value){
     element.setAttribute(attr, value);
 }
 
-function addClass(element, classToAdd){
-    element.classList.add(classToAdd);
+function addClass(element, ...classes){
+    classes.forEach(classToAdd =>{
+      element.classList.add(classToAdd);  
+    })
 }
 
 function createElementHtml(element){
@@ -21,8 +23,7 @@ function createInputTask(text){
     //cria o elemento DIV e atribui uma classe a ele 
     let div = createElementHtml('div');
     setAttributeElement(div, 'onclick', 'taskCheked(this, event)');
-    addClass(div, 'img-animation');
-    addClass(div, 'div-task');
+    addClass(div, 'img-animation', 'div-task');
 
     //cria o elemento IMG e seta seus atributos
     let img = createElementHtml('img');
