@@ -11,6 +11,12 @@ function addClass(element, classToAdd){
     element.classList.add(classToAdd);
 }
 
+function createElementHtml(element){
+    let el = document.createElement(element);
+
+    return el;
+}
+
 function createInputTask(text){
     //cria o elemento DIV e atribui uma classe a ele 
     let div = document.createElement('div');
