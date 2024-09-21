@@ -3,33 +3,43 @@ const inputTask = document.getElementById('input-task');
 const form = document.getElementById('form');
 const divInput = document.getElementById('div-input');
 
-function setAttributeElement(element, attr, value){
-    element.setAttribute(attr, value);
+
+//função para setar atributos de elementos HTML
+function setAttributeElement(element, attributes){
+    for(let key in attributes){
+        element.setAttribute(key, attributes[key]);
+    }
 }
 
+//função para adicionar classes a elementos HTML
 function addClass(element, ...classes){
     classes.forEach(classToAdd =>{
       element.classList.add(classToAdd);  
     })
 }
 
+//função para criar elementos HTML
 function createElementHtml(element){
-    let el = document.createElement(element);
-
-    return el;
+    return document.createElement(element);
 }
 
+//função que cria todo o HTML da TASK e adiciona na tag FORM
 function createInputTask(text){
     //cria o elemento DIV e atribui uma classe a ele 
     let div = createElementHtml('div');
-    setAttributeElement(div, 'onclick', 'taskCheked(this, event)');
+    setAttributeElement(div, {
+        onclick: 'taskCheked(this, event)' 
+    });
+
     addClass(div, 'img-animation', 'div-task');
 
     //cria o elemento IMG e seta seus atributos
     let img = createElementHtml('img');
-    setAttributeElement(img, 'src', './images/unchecked.png');
-    setAttributeElement(img, 'width', '24px');
-    setAttributeElement(img, 'alt', 'Icon');
+    setAttributeElement(img, {
+        src: './images/unchecked.png',
+        width: '24px',
+        alt: 'Icon'
+    })
 
     //cria o elemento P e adiciona o seu texto
     let p = createElementHtml('p');
@@ -39,9 +49,11 @@ function createInputTask(text){
 
     //cria o elemento INPUT e atribui seu value
     let buttonExclue = createElementHtml('buttonExclue');
-    setAttributeElement(buttonExclue, 'type', 'submit');
-    setAttributeElement(buttonExclue, 'onclick', 'excludeTask(this)');
-    setAttributeElement(buttonExclue, 'value', 'x');
+    setAttributeElement(buttonExclue, {
+        type: 'submit',
+        onclick: 'excludeTask(this)',
+        value: 'x'
+    })
 
     //colocando os elementos dentro dos outros
     div.appendChild(img);
@@ -88,7 +100,7 @@ function taskCheked(click, event){
 
         }else{
             img.setAttribute('src', './images/checked.png');
-            p.classList.add('task-checked');
+            addClass(p, 'task-checked');
         } 
     }
     
