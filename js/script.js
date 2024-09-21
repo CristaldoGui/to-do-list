@@ -19,25 +19,25 @@ function createElementHtml(element){
 
 function createInputTask(text){
     //cria o elemento DIV e atribui uma classe a ele 
-    let div = document.createElement('div');
+    let div = createElementHtml('div');
     setAttributeElement(div, 'onclick', 'taskCheked(this, event)');
     addClass(div, 'img-animation');
     addClass(div, 'div-task');
 
     //cria o elemento IMG e seta seus atributos
-    let img = document.createElement('img');
+    let img = createElementHtml('img');
     setAttributeElement(img, 'src', './images/unchecked.png');
     setAttributeElement(img, 'width', '24px');
     setAttributeElement(img, 'alt', 'Icon');
 
     //cria o elemento P e adiciona o seu texto
-    let p = document.createElement('p');
+    let p = createElementHtml('p');
     addClass(p, 'input-task-check');
     text = document.createTextNode(text);
     p.appendChild(text);
 
     //cria o elemento INPUT e atribui seu value
-    let buttonExclue = document.createElement('input');
+    let buttonExclue = createElementHtml('buttonExclue');
     setAttributeElement(buttonExclue, 'type', 'submit');
     setAttributeElement(buttonExclue, 'onclick', 'excludeTask(this)');
     setAttributeElement(buttonExclue, 'value', 'x');
